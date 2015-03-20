@@ -1,0 +1,309 @@
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,300,200);
+
+body{
+
+    background-color: rgba(220,220,220,0.1);
+    font-family: 'Titillium Web', sans-serif;
+    font-size:14px;
+	color:#000;
+	padding:0;
+	margin:0;
+}
+
+ol, ul , li{
+	list-style:none;
+}
+
+a{
+text-decoration:none;
+}
+
+#contenedor{
+	padding:0;
+	margin:auto;
+	width:800px;
+	height:100%;
+}
+/* ----------------------- HEADER -----------------------*/
+header{
+	height:150px;
+	height:20%;
+	padding:20px 50px 0px 20px;
+	margin-bottom:20px;
+}
+
+#redessociales ul li{
+	float:right;
+}
+
+#redessociales ul li img{
+	margin-right:15px;
+	width:30px;
+	height:30px;
+	border-radius:15px;
+	/* ANIMACIONES EN CSS */
+	-webkit-transition:all 0.5s ease-in;
+	-moz-transition:all 0.5s ease-in; 
+	-ms-transition:all 0.5s ease-in; 
+	-o-transition:all 0.5s ease-in;
+	transition:all 0.5s ease-in;
+
+}
+#redessociales  ul li  a:hover  img{
+	-webkit-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	-o-transform:rotate(360deg);
+	transform:rotate(360deg);	
+}
+
+#logotipo {
+	float:left;
+}
+
+
+nav{
+	margin-left:30px;
+	margin-top:20px;	
+}
+
+nav ul li {
+	float:left;
+	padding-left:25px;
+	padding-right:25px;
+	border-bottom:2px solid #ccc;
+	
+	-webkit-transition: all 0.5s ease; 
+	-moz-transition: all 0.5s ease; 
+	-ms-transition: all 0.5s ease; 
+	-o-transition: all 0.5s ease;  
+}
+nav ul li a{
+
+	float:left;
+	height:60px;
+	color:#000;
+}
+
+nav ul li:hover {
+	border-bottom:2px solid #428bca;
+}
+
+nav ul li a:hover {
+	color:#428bca;
+}
+.clear {
+	clear:both;
+}
+/* ----------------------- SECCION PRINCIPAL -----------------------*/
+section{
+	min-height:500px;	
+	height:60%;
+}
+/* ----- PANEL PRINCIPAL -----*/
+.panel{
+	 height:450px;
+	 background: url("../images/08.JPG") no-repeat ;
+	 background-size: 100% 100%;
+}
+.titulo{
+	height:120px;
+	background-color:rgba(255,255,255,0.5);
+	padding:15px;
+	text-shadow:1px 1px #bbb;
+}
+/* ----- PANEL SALIENTE -----*/
+.panelsaliente{
+	min-height:450px;
+	padding:25px;
+}
+.panelsaliente{
+	height:250px;
+	width:750px;
+	position:absolute;
+	margin-left:-1200px;
+	
+	/*ANIMACION*/
+	/*visibility: hidden;*/
+	-webkit-transition: all 1.5s ease; 
+	-moz-transition: all 1.5s ease; 
+	-ms-transition: all 1.5s ease; 
+	-o-transition: all 1.5s ease;  
+}
+
+/* TARGET,SI SE ACTIVA, cambia propiedades*/
+#panel2:target,#panel3:target,#panel4:target{
+	margin-top:0px;
+	background:#fff;
+	position:absolute;
+	margin-left:0px;
+	height:250px;
+
+}
+/* --------------- FOOTER ---------------*/
+footer{
+	height:40px;
+	height:20%;
+	color:#FFF;
+	background:#aaa;
+
+}
+.firma{
+text-align:center;
+vertical-align:middle;
+}
+/* PANEL TABLA*/
+
+td{
+	opacity: 0.9;
+	border:1px solid #000;
+	height:20px;
+	width:80px;	
+}
+/* PRIMERA COLUMNA */
+table tr td:first-child{
+	width:250px;
+    background:#ccc;
+	text-transform:uppercase;
+}
+/*impar even odd PAR*/
+
+table tr  td:nth-child(4){
+	background:#bad;
+	width:400px;
+}
+/* PRIMERA FILA*/
+table tr:first-child td{
+	background:#eee;
+	text-align:center;
+}
+table tr:hover td{
+	opacity: 1;
+}
+
+.color-red td{
+	background:#f00;
+}
+
+/*------ FORMULARIO -----*/
+input{
+	height:15px;
+	border:none;
+	border:1px solid #ccc;
+	border-radius:5px ;
+	padding:5px 10px;
+	color:#fff;
+}
+/*RESPONSIVE
+<768px ≥768px 	≥992px	≥1200px*/
+@media (min-width:408px){
+input{
+	width:250px;
+	background:red;	
+}
+}
+@media (min-width:700px){
+input{
+	width:400px;
+	background:blue;
+}
+}
+@media (min-width:1200px){
+input{
+	width:600px;
+	background:#67b168;
+}
+}
+
+button{
+	height:30px;
+	width:120px;
+	border:none;
+	border-radius:5px;
+	background-color: #5cb85c;
+	border-color: #4cae4c;
+	color:#FFF;
+}
+
+button:hover{
+	
+	background-color: #449d44;
+	border-color: #398439;
+	
+}
+/*MODAL*/
+#panel5{
+	position:absolute;
+	opacity:0;
+	left:0;
+	top:0;
+    z-index:-1;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.8);
+	
+	-webkit-transition: all 1s ease; 
+	-moz-transition: all 1s ease; 
+	-ms-transition: all 1s ease; 
+	-o-transition: all 1s ease;
+
+}
+		
+.contenidomodal{
+	    opacity:0;
+		padding:25px;
+		margin:auto;
+		margin-top:10%;
+		width:400px;
+		height:60%;
+		border:1px solid #000;
+		background:#fff;
+		border-radius:15px;
+		box-shadow:5px 5px rgba(0,0,0,0.5);
+		
+	-webkit-transition: all 0.2s ease; 
+	-moz-transition: all 0.2s ease; 
+	-ms-transition: all 0.2s ease; 
+	-o-transition: all 0.2s ease;
+}
+
+#panel5:target,#panel5:target .contenidomodal{
+	opacity:1;
+    z-index:1;
+}
+
+/* @brand-primary: #428bca;
+@brand-success: #5cb85c;
+@brand-info:    #5bc0de;
+@brand-warning: #f0ad4e;
+@brand-danger:  #d9534f; */
+
+@keyframes animatedBackground {
+		from { background-position: 0 0; }
+		to { background-position: 100% 0; }
+	}
+	@-webkit-keyframes animatedBackground {
+		from { background-position: 0 0; }
+		to { background-position: 100% 0; }
+	}
+	@-ms-keyframes animatedBackground {
+		from { background-position: 0 0; }
+		to { background-position: 100% 0; }
+	}
+	@-moz-keyframes animatedBackground {
+		from { background-position: 0 0; }
+		to { background-position: 100% 0; }
+	}
+	
+	#animate-area	{ 
+		width: 700px; 
+		height: 400px; 
+		background-image: url(../images/nubes.png);
+		background-position: 0px 0px;
+		background-repeat: repeat-x;
+		/*background-repeat: no-repeat;*/
+		animation: animatedBackground 40s linear infinite;
+		-ms-animation: animatedBackground 40s linear infinite;
+		-moz-animation: animatedBackground 40s linear infinite;
+		-webkit-animation: animatedBackground 40s linear infinite;
+	}
